@@ -2,9 +2,9 @@
 import streamlit as st
 
 st.title("성적표")
-name= st.text_input("Enter your name")
+name= st.text_input("이름:")
 # 과목 점수 입력
-st.subheader("Enter your scores")
+st.subheader("점수 입력")
 python = st.number_input("Python", min_value=0, max_value=100, step=1)
 excel = st.number_input("Excel", min_value=0, max_value=100, step=1)
 data = st.number_input("Digital Literacy", min_value=0, max_value=100, step=1)
@@ -16,4 +16,5 @@ if st.button("Calculate"):
     st.write(f"Name: **{name}**")
     st.write(f"Total Score: {total:.0f}") #st.success()로 써도 됨
     st.write(f"Average Score: {avg:.2f}")
+
 
