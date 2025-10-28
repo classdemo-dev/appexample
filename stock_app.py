@@ -12,12 +12,12 @@ st.caption("데이터 출처: Yahoo Finance (https://finance.yahoo.com/)")
 data = yf.download(symbol, period=period, interval=interval)
 price = st.write(data["Close"].iloc[-1])
 
-plt.plot(data.index, data["Close"], color="tab:blue", linewidth=3)
+plt.plot(data.index, data["Close"])
 plt.title(f"{symbol}({period}, {interval})")
 plt.xlabel("Date")
 plt.ylabel("Price")
-plt.legend()
 st.pyplot(plt)
+
 
 
 
