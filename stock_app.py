@@ -16,8 +16,9 @@ plt.plot(data.index, data["Close"])
 plt.rcParams['font.family'] = 'NanumGothic'
 plt.rcParams['axes.unicode_minus'] = False
 
-plt.title(f"{symbol} 종가({period}, {interval})")
-plt.xlabel("기간")
-plt.ylabel("가격")
+plt.title(f"{symbol}({period}, {interval})")
+plt.xlabel("Date")
+plt.ylabel("Price")
 st.pyplot(plt)
+
 
