@@ -16,13 +16,12 @@ if st.button("Calculate"):
     st.write(f"Name: **{name}**")
     st.write(f"Total Score: {total:.0f}") #st.success()로 써도 됨
     st.write(f"Average Score: {avg:.2f}")
-
-     if avg >= 90:
-         st.success("Grade: Excellent")
-     elif avg >= 70:
-         st.info("Grade: Good")
-     else:
-         st.warning("Grade: Try Again")
+    if avg >= 90:
+        st.success("Grade: Excellent")
+    elif avg >= 70:
+        st.info("Grade: Good")
+    else:
+        st.warning("Grade: Try Again")
 
     # 그래프 표시
     st.subheader("Score Chart")
@@ -31,6 +30,7 @@ if st.button("Calculate"):
         "Score": [python, excel, data]
     })
     st.bar_chart(df.set_index("Subject"))
+
 
 
 
