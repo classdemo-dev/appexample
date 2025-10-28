@@ -25,11 +25,10 @@ if st.button("Calculate"):
 
     # 그래프 표시
     st.subheader("Score Chart")
-    df = pd.DataFrame({
-        "Subject": ["Python", "Excel", "Data Literacy"],
-        "Score": [python, excel, data]
-    })
-    st.bar_chart(df.set_index("Subject"))
+    scores = {"Python": python, "Excel": excel, "Data Literacy": data}
+    st.bar_chart(list(scores.values()), x=None, y=None)
+    st.write("Subjects: Python | Excel | Data Literacy")
+
 
 
 
