@@ -13,8 +13,11 @@ data = yf.download(symbol, period=period, interval=interval)
 price = st.write(data["Close"].iloc[-1])
 
 plt.plot(data.index, data["Close"])
-plt.rcParams['font.family'] = 'Malgun Gothic'
+plt.rcParams['font.family'] = 'NanumGothic'
+plt.rcParams['axes.unicode_minus'] = False
+
 plt.title(f"{symbol} 종가({period}, {interval})")
 plt.xlabel("기간")
 plt.ylabel("가격")
 st.pyplot(plt)
+
